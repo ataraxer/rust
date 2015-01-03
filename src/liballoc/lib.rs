@@ -70,6 +70,8 @@
 
 #[phase(plugin, link)]
 extern crate core;
+
+#[cfg(all(not(feature = "external_funcs"), not(feature = "external_crate")))]
 extern crate libc;
 
 // Allow testing this library
